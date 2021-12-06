@@ -1,0 +1,30 @@
+[
+    {
+        "model": "rememberwhenapi.category",
+        "pk": 1,
+        "fields": {
+            "type": "Music"
+        }
+    },
+    {
+        "model": "rememberwhenapi.category",
+        "pk": 2,
+        "fields": {
+            "type": "Movies"
+        }
+    },
+        {
+        "model": "rememberwhenapi.category",
+        "pk": 3,
+        "fields": {
+            "type": "Sports"
+        }
+    },
+    {
+        "model": "rememberwhenapi.category",
+        "pk": 4,
+        "fields": {
+            "type": "Historical Events"
+        }
+    }
+]

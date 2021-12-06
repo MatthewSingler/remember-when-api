@@ -1,0 +1,11 @@
+[
+    {
+        "model": "rememberwhenapi.comment",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "contents": "The very first comment about a topic",
+            "fact": 1
+        }
+    }
+]
