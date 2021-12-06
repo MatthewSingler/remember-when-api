@@ -1,8 +1,16 @@
 {
     "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+        "--django-settings-module=rememberwhen.settings",
+    ],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Remember When db",
+            "database": "db.sqlite3"
+        }
+    ],
 }
-"python.linting.pylintArgs": [
-    "--load-plugins=pylint_django",
-    "--django-settings-module=<remember-when-api>.settings",
-],
