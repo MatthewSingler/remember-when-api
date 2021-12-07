@@ -1,6 +1,6 @@
 [
     {
-        "model": "rememberwhenapi.fact_category",
+        "model": "rememberwhenapi.factcategory",
         "pk": 1,
         "fields": {
             "fact": 1,
