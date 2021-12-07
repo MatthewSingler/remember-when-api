@@ -1,13 +1,13 @@
 [
     {
-        "models": "rememberwhenapi.year",
+        "model": "rememberwhenapi.year",
         "pk": 1,
         "fields": {
             "year_number": 1999
         }
     },
     {
-        "models": "rememberwhenapi.year",
+        "model": "rememberwhenapi.year",
         "pk": 2,
         "fields": {
             "year_number": 2014
