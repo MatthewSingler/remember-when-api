@@ -18,11 +18,12 @@ class FactView(ViewSet):
         Returns:
             Response -- JSON serialized fact instance
         """
-        #user = User.objects.get(user=request.auth.user) #should it be user or member?
+        user = User.objects.get(pk=request.auth.user.id) #should it be user or member?
         category = Category.objects.get(pk=request.data["category"])
         year = Year.objects.get(year_number=request.data['year'])
         try:
             fact = Fact.objects.create(
+                user = user,
                 year = year,
                 contents = request.data['contents'],
                 is_approved= request.data['is_approved']
@@ -98,6 +99,7 @@ class FactSerializer(serializers.ModelSerializer):
     Arguments:
         serializer type
     """
+    user = UserSerializer(many = False)
     class Meta:
         model = Fact
         fields = ('id', 'category', 'contents', 'year', 'is_approved', 'user')
