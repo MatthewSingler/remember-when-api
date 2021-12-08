@@ -3,14 +3,300 @@
         "model": "rememberwhenapi.year",
         "pk": 1,
         "fields": {
-            "year_number": 1999
+            "year_number": 1980
         }
     },
     {
         "model": "rememberwhenapi.year",
         "pk": 2,
         "fields": {
+            "year_number": 1981
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 3,
+        "fields": {
+            "year_number": 1982
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 4,
+        "fields": {
+            "year_number": 1983
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 5,
+        "fields": {
+            "year_number": 1984
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 6,
+        "fields": {
+            "year_number": 1985
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 7,
+        "fields": {
+            "year_number": 1986
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 8,
+        "fields": {
+            "year_number": 1987
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 9,
+        "fields": {
+            "year_number": 1988
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 10,
+        "fields": {
+            "year_number": 1989
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk":11,
+        "fields": {
+            "year_number": 1990
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 12,
+        "fields": {
+            "year_number": 1991
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 13,
+        "fields": {
+            "year_number": 1992
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 14,
+        "fields": {
+            "year_number": 1993
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 15,
+        "fields": {
+            "year_number": 1994
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 16,
+        "fields": {
+            "year_number": 1995
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 17,
+        "fields": {
+            "year_number": 1996
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 18,
+        "fields": {
+            "year_number": 1997
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 19,
+        "fields": {
+            "year_number": 1998
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 20,
+        "fields": {
+            "year_number": 1999
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 21,
+        "fields": {
+            "year_number": 2000
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 22,
+        "fields": {
+            "year_number": 2001
+        }
+    },{
+        "model": "rememberwhenapi.year",
+        "pk": 23,
+        "fields": {
+            "year_number": 2002
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 24,
+        "fields": {
+            "year_number": 2003
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 25,
+        "fields": {
+            "year_number": 2004
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 26,
+        "fields": {
+            "year_number": 2005
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 27,
+        "fields": {
+            "year_number": 2006
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 28,
+        "fields": {
+            "year_number": 2007
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 29,
+        "fields": {
+            "year_number": 2008
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 30,
+        "fields": {
+            "year_number": 2009
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 31,
+        "fields": {
+            "year_number": 2010
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 32,
+        "fields": {
+            "year_number": 2011
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 33,
+        "fields": {
+            "year_number": 2012
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 34,
+        "fields": {
+            "year_number": 2013
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 35,
+        "fields": {
             "year_number": 2014
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 36,
+        "fields": {
+            "year_number": 2015
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 36,
+        "fields": {
+            "year_number": 2016
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 37,
+        "fields": {
+            "year_number": 2017
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 38,
+        "fields": {
+            "year_number": 2018
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 39,
+        "fields": {
+            "year_number": 2019
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 40,
+        "fields": {
+            "year_number": 2020
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 41,
+        "fields": {
+            "year_number": 2021
+        }
+    },
+    {
+        "model": "rememberwhenapi.year",
+        "pk": 42,
+        "fields": {
+            "year_number": 2022
         }
     }
 ]
