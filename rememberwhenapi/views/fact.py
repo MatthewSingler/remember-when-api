@@ -8,23 +8,22 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from rest_framework.decorators import action
-import datetime
-from rememberwhenapi.models import Member, Comment, FactCategory, Fact, fact_category
+from rememberwhenapi.models import Member, Comment, FactCategory, Fact, Category, Year
 from django.contrib.auth.models import User
 
-class FactView(ViewSet)
+class FactView(ViewSet):
 
     def create(self, request):
         """Handle POST operations
         Returns:
             Response -- JSON serialized fact instance
         """
-        user = User.objects.get(user=request.auth.user) #should it be user or member?
-        fact_category = FactCategory.objects.get(pk=request.data["factCategoryId"])
-        
+        #user = User.objects.get(user=request.auth.user) #should it be user or member?
+        category = Category.objects.get(pk=request.data["category"])
+        year = Year.objects.get(year_number=request.data['year'])
         try:
             fact = Fact.objects.create(
-                year = request.data['year'],
+                year = year,
                 contents = request.data['contents'],
                 is_approved= request.data['is_approved']
             )
@@ -57,8 +56,8 @@ class FactView(ViewSet)
         fact.year = request.data['year'],
         fact.contents = request.data['contents'],
         fact.is_approved = request.data['is_approved']
-        fact_category = FactCategory.objects.get(pk=request.data["factCategoryId"])
-        fact.fact_category = fact_category
+        category = FactCategory.objects.get(pk=request.data["factCategoryId"])
+        fact.category = category
         fact.save()
         return Response({}, status=status.HTTP_204_NO_CONTENT)
     
@@ -82,13 +81,18 @@ class FactView(ViewSet)
             Response -- JSON serialized list of facts
         """
         facts = Fact.objects.all()
-        fact_category = self.request.query_params.get('category', None)
-        if fact_category is not None:
-            facts = facts.filter(fact_category__id=fact_category)
+        category = self.request.query_params.get('category', None)
+        if category is not None:
+            facts = facts.filter(fact_category__id=category)
         serializer = FactSerializer(
             facts, many=True, context={'request': request})
         return Response(serializer.data)
     
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name')
+        
 class FactSerializer(serializers.ModelSerializer):
     """JSON serializer for facts
     Arguments:
@@ -96,5 +100,5 @@ class FactSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Fact
-        fields = ('id', 'fact_category', 'contents', 'year', 'user')
+        fields = ('id', 'category', 'contents', 'year', 'user')
         depth = 1
