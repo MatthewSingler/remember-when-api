@@ -100,5 +100,5 @@ class FactSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Fact
-        fields = ('id', 'category', 'contents', 'year', 'user')
+        fields = ('id', 'category', 'contents', 'year', 'is_approved', 'user')
         depth = 1
