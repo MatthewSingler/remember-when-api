@@ -8,7 +8,6 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from rest_framework.decorators import action
-import datetime
 from rememberwhenapi import models
 from rememberwhenapi.models import Member, Comment, Fact, Category
 from django.contrib.auth.models import User
@@ -39,6 +38,16 @@ class CommentView(ViewSet):
         serializer = CommentSerializer(
             comments, many=True, context={'request': request})
         return Response(serializer.data)
+    
+    def destroy(self, request, pk=None):
+        try:
+            comment = Comment.objects.get(pk=pk)
+            comment.delete()
+            return Response({}, status=status.HTTP_204_NO_CONTENT)
+        except Fact.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
