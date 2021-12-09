@@ -18,7 +18,7 @@ class FactView(ViewSet):
         Returns:
             Response -- JSON serialized fact instance
         """
-        user = User.objects.get(pk=request.auth.user.id) #should it be user or member?
+        user = User.objects.get(pk=request.auth.user.id)
         category = Category.objects.get(pk=request.data["category"])
         year = Year.objects.get(year_number=request.data['year'])
         try:
@@ -28,6 +28,7 @@ class FactView(ViewSet):
                 contents = request.data['contents'],
                 is_approved= request.data['is_approved']
             )
+            fact.category.add(category)
             serializer = FactSerializer(fact, context={'request': request})
             return Response(serializer.data, status=201)
         except ValidationError as ex:
