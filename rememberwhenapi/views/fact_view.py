@@ -53,11 +53,10 @@ class FactView(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
-        user = User.objects.get(user=request.auth.user)
         fact = Fact.objects.get(pk=pk)
-        fact.year = request.data['year'],
-        fact.contents = request.data['contents'],
-        fact.is_approved = request.data['is_approved']
+        year_number = Year.objects.get(request.data['year'])
+        fact.year_number = year_number
+        fact.contents = request.data['contents']
         category = FactCategory.objects.get(pk=request.data["factCategoryId"])
         fact.category = category
         fact.save()
