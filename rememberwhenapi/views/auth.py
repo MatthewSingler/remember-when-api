@@ -40,15 +40,13 @@ def register_user(request):
       request -- The full HTTP request object
     '''
     new_user = User.objects.create_user(
-        username=request.data['email'],
+        email=request.data['email'],
         password=request.data['password'],
         first_name=request.data['first_name'],
-        last_name=request.data['last_name']
+        last_name=request.data['last_name'],
+        username=request.data['username']
     )
-    member = Member.objects.create(
-        user= new_user,
-        admin = request.data['admin']
-    )
-    token = Token.objects.create(user=member.user)
+
+    token = Token.objects.create(user=new_user)
     data = { 'token': token.key }
-    return Response(data)
+    return Response(data, status=201)
