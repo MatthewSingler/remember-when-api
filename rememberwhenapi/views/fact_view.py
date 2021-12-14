@@ -82,9 +82,14 @@ class FactView(ViewSet):
             Response -- JSON serialized list of facts
         """
         facts = Fact.objects.all()
+        year = self.request.query_params.get('year', None)
         category = self.request.query_params.get('category', None)
         if category is not None:
             facts = facts.filter(fact_category__id=category)
+        if year is not None:
+            facts = facts.filter(year__year_number=year)
+        
+            
         serializer = FactSerializer(
             facts, many=True, context={'request': request})
         return Response(serializer.data)
