@@ -26,7 +26,7 @@ class FactView(ViewSet):
                 user = user,
                 year = year,
                 contents = request.data['contents'],
-                is_approved= request.data['is_approved']
+                is_approved= True
             )
             fact.category.add(category)
             serializer = FactSerializer(fact, context={'request': request})
