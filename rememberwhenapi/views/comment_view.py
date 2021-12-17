@@ -32,7 +32,7 @@ class CommentView(ViewSet):
         
     def list(self, request):
         comments = Comment.objects.all()
-        fact = self.request.query_params.get('fact', None)
+        fact = self.request.query_params.get('facts', None)
         if fact is not None:
             comments = comments.filter(fact__id=fact)
         serializer = CommentSerializer(
@@ -57,5 +57,5 @@ class CommentSerializer(serializers.ModelSerializer):
     user = UserSerializer(many=False)
     class Meta:
         model = Comment
-        fields = ('user', 'contents', 'fact')
+        fields = ('user', 'contents', 'fact', 'id')
         depth = 1
