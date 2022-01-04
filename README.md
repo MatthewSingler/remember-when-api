@@ -6,7 +6,7 @@ Remember When is an application that allows users to participate in adding memor
 
 # Local Setup
 1. Clone this repo  
-`https://github.com/MatthewSingler/rememberwhen`<br/>
+`https://github.com/MatthewSingler/remember-when-api.git`<br/>
 2. cd into directory in terminal  
 `cd rememberwhen`<br/>
 3. Run `pipenv install`  
