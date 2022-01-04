@@ -2,7 +2,8 @@
 Remember When is an application that allows users to participate in adding memories and facts to a databse. Users can sort through all the facts to jog their memories and interact with other users to compare what they remember from previous years. All users can comment on any piece of information in order to interact with others.
 
 # Features
-
+* Crud functionality
+* Filtering database based on year and category
 
 # Local Setup
 1. Clone this repo  
