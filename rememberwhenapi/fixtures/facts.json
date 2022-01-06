@@ -5,7 +5,8 @@
         "fields": {
             "year": 1,
             "contents": "Beck won an Album of The Year Grammy in 2014 for Morning Phase",
-            "is_approved": true
+            "is_approved": true,
+            "user_id": 1
         }
     },
     {
@@ -14,7 +15,8 @@
         "fields": {
             "year": 2,
             "contents": "The movie Big Daddy, staring Adam Sandler was released",
-            "is_approved": true
+            "is_approved": true,
+            "user_id": 1
         }
     }
 ]
