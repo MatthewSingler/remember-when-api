@@ -31,6 +31,9 @@ class CommentView(ViewSet):
             return Response({'reason': ex.message}, status=status.HTTP_400_BAD_REQUEST)
         
     def list(self, request):
+        # For models with related fields you want to use select_related and prefetch_related to minimize database queries. 
+        # I would spend *a lot* of time reading about, trying to understand, testing using these two methods as they are HUGE 
+        # difference between beginner and intermediate and something that's pretty pass/fail for us when hiring product engineer. 
         comments = Comment.objects.all()
         fact = self.request.query_params.get('facts', None)
         if fact is not None:
